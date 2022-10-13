@@ -1,0 +1,222 @@
+/*Reset e import*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;  
+}
+
+body{
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--Cream);
+  min-width:95vw ;
+  min-height: 100vh;
+}
+
+/*Isso aqui foi so um teste para me divertir um pouco mais nao e uma boa ideia colocar um hover no body ok*/
+
+body:hover{
+  background: radial-gradient(red,pink,purple);
+}
+
+/*ROOT COLORS*/
+:root{
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+}
+
+/*imagem*/
+.img-2{
+  display: none;
+ 
+ }
+
+ /*Container*/
+.container{
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 350px;
+  height: 600px;
+  background-color: var(--White);
+}
+
+.container{
+  /*Aqui em chamo minha animacao*/
+  animation: float 3s ease-in-out infinite;
+}
+
+/*aqui eu uso um keyframe com ainfomacao para usar na minha animação*/
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-25px);
+  }
+}
+
+/*Box-imagem*/
+.box-imagem > img {
+  width: 350px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/*Titulo e paragrafos*/
+.info{
+  padding: 15px;
+}
+
+h1,h4,p{
+  margin: 5px;
+
+}
+
+h1{
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: 'Fraunces', serif;
+}
+h4{
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+}
+
+.info > p{
+  padding: 0px;
+  max-width: 255px;
+}
+
+/*button info e paragrafo*/
+
+.button-info p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly ;
+    margin-left: 12px;
+    margin-bottom: 25px;
+    width: 250px;  
+}
+
+.button-info p {
+  width: 200px;
+  margin-top: 15px;
+  margin-left: 6px;
+}
+
+
+
+
+.line > #big{
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--Dark-cyan);
+  font-family: 'Fraunces', serif;
+}
+
+.line > #line-item{
+  text-decoration: line-through;
+}
+
+button{
+  width: 300px;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  margin: auto 10px ;
+  background-color: #3d8168;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #1a4031;
+}
+
+button > i {
+  margin-right: 10px;
+}
+
+
+/*Media query min-width: 1440 mais uso 1114*/
+@media (min-width: 1114px){
+  .container{
+    display: flex;
+    flex-direction: row;
+    margin: 95px auto;
+    width: 550px;
+    height: 409px;
+  }
+
+  .info{
+    padding: 15px;
+    max-width: 250px;
+  }
+
+  .info > p{
+    padding: 0px;
+    max-width: 275px;
+    margin-left: 5px;
+  }
+
+ 
+button{
+  margin: auto 0 ;
+  width: 212px;
+}
+
+
+.button-info p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly ;
+  margin-left:-10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 225px;
+
+}
+
+
+.button-info p {
+  width: 200px;
+  margin-top: 15px;
+  margin-left: 3px;
+ 
+}
+
+
+
+.box-imagem > img {
+  width: 350px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 15px;
+}
+
+  .img-1{
+    display: none;
+  }
+
+ .img-2{
+  display: block;
+  max-width: 272px;
+  height: 409px;
+ }
+}
